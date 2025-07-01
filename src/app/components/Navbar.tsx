@@ -1,13 +1,13 @@
 import NavbarButton from "@/app/components/NavbarButton"
 
-  NavbarItem {
+ type Navbar = {
     lucide: React.ReactNode;
     link: string;
     text: string;
 }
 
-interface NavbarProps {
-    items: NavbarItem[];
+type NavbarProps = {
+    items: Navbar[];
 }
 
 export default function Navbar({ items }: NavbarProps) {
