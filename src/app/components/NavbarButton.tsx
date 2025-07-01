@@ -1,4 +1,3 @@
-import { LucideIcon } from "lucide-react"
 
 export default function NavbarButton(props: { link: string, text: string, lucide: React.ReactNode}) {
     return (
