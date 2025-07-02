@@ -8,9 +8,9 @@ export default function AnimalsHomePage() {
         <h2 className="font-amatic text-[1.8rem] font-bold text-[#333] mt-[5%] uppercase">
           Nos animaux à adopter
         </h2>
-        <p className="font-roboto p-[30px] w-[85%]">
-          Découvrez en image tous nos animaux qui attendent une famille
-          aimante. Chaque photo raconte une histoire et un espoir.
+        <p className="font-roboto p-[30px] w-[50%]">
+          Découvrez en image tous nos animaux qui attendent une famille aimante.
+          Chaque photo raconte une histoire et un espoir.
         </p>
 
         <section className="grid grid-cols-4 [grid-template-rows:repeat(3,200px)] shadow-md shadow-black/20 gap-2.5">
@@ -93,12 +93,11 @@ export default function AnimalsHomePage() {
               height={500}
             />
           </div>
-
-          <button className="mt-[20px] mb-[20px] bg-(--dark-color) text-white rounded-[20px] h-[45px] w-[100%] hover:bg-[#8d8c8c]">
-            <Link href="/volunteersView/searchPet">Voir tous les animaux</Link>
-          </button>
         </section>
+        <button className="mt-[40px] mb-[20px] bg-(--dark-color) text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8d8c8c]">
+          <Link href="/volunteersView/searchPet">Voir tous les animaux</Link>
+        </button>
       </main>
     </>
-  )
+  );
 }
