@@ -5,13 +5,13 @@ export default function AnimalsHomePage() {
   return (
     <>
       <main className="flex flex-col items-center text-center p-[30px] bg-(--bg-homepage) -mt-[70px] pt-[70px]">
-        <h2 className="font-amatic text-[1.8rem] font-bold text-[#333] mt-[5%] uppercase">
+        <h2>
           Nos animaux à adopter
         </h2>
-        <p className="font-roboto p-[30px] w-[50%]">
+        <h3>
           Découvrez en image tous nos animaux qui attendent une famille aimante.
           Chaque photo raconte une histoire et un espoir.
-        </p>
+        </h3>
 
         <section className="grid grid-cols-4 [grid-template-rows:repeat(3,200px)] shadow-md shadow-black/20 gap-2.5">
           <div className="relative col-start-1 row-span-2">

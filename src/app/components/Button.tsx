@@ -1,8 +1,7 @@
-export default function Button(props: { label: string, lucide: string, classes: string, onClick: () => void }) {
+export default function Button(props: { label: string, classes: string, onClick: () => void }) {
     return (
-        <button className={"border-2 rounded-xl px-30 h-20" + props.classes } onClick={props.onClick}>
+        <button className={"border-2 rounded-3xl px-10 h-10" + props.classes } onClick={props.onClick}>
             {props.label}
         </button>
     )
 }
-
