@@ -1,26 +1,61 @@
+"use client";
 
-import { Amatic_SC } from 'next/font/google'
+import { Amatic_SC } from "next/font/google";
+
 import Banner from "./components/Banner";
+import AnimalsHomePage from "./components/AnimalsHomePage";
+import QuestionsArea from "./components/QuestionsArea";
+import LastQuestion from "./components/LastQuestion";
+import Button from "./components/Button";
+
+import { useRouter } from "next/navigation";
 
 const amatic = Amatic_SC({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-amatic',
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-amatic",
 });
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className="relative aspect-[16/9]">
-       <Banner
-        src="/assets/background.jpg"
-        alt="image bannière"
-        title="Donnons-leur autant qu'ils nous apportent"
-        paragraph="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption."
-        // containerClassName="w-full h-[400px]"
-        // imageClassName="object-cover brightness-70"
-        // titleClassName="font-amatic font-extrabold text-[2.3rem] text-center text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        // paragraphClassName="font-roboto absolute top-[250px] w-full text-center text-white"
-      />
-    </div>
+    <>
+      <div className="relative">
+        <Banner
+          src="/assets/background.jpg"
+          alt="image bannière"
+          title="Donnons-leur autant qu'ils nous apportent"
+          paragraph="Chaque jour, des milliers d'animaux attendent une famille aimante. Trouvez votre compagnon idéal parmi nos animaux disponibles à l'adoption."
+        />
+      </div>
+
+      <AnimalsHomePage />
+      <QuestionsArea />
+      <section className="flex flex-col text-center">
+        <LastQuestion
+          title="Prêt.e à changer une vie ?"
+          subtitle="Adoptez, partagez,soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur, vous pouvez offrir une seconde chance à un animal abandonné."
+        />
+
+        <div className="flex items-center gap-10">
+          <Button
+            label="Ajouter un animal"
+            onClick={() => router.push("/adopt")}
+            classes="bg-(--dark-color)"
+          />
+          <Button
+            label="Faire un don 🫶🏽"
+            onClick={() => router.push("/adopt")}
+            classes=""
+          />
+          <Button
+            label="Devenir bénévole"
+            onClick={() => router.push("/beVolunteer")}
+            classes=""
+          />
+        </div>
+      </section>
+    </>
   );
 }

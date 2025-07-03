@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { Home, LogIn, Handshake, PersonStanding } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +13,29 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const items = [
+  {
+    text: "Accueil",
+    lucide: <Home />,
+    link: "/",
+  },
+  {
+    text: "Je deviens bénévole",
+    lucide: <PersonStanding/>,
+    link: "/volunteersView/beVolunteer",
+  },
+  {
+    text: "Je donne",
+    lucide: <Handshake/>,
+    link: "/",
+  },
+  {
+    text: "Je me connecte",
+    lucide: <LogIn/>,
+    link: "/logIn",
+  }
+];
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +52,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar {text="Accueil"}/>
+        <Navbar items={items}/>
         {children}
       </body>
     </html>

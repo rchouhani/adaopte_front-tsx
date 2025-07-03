@@ -14,7 +14,7 @@ export default function Footer () {
             <div className="p-5 bg-(--dark-color) text-white">
                 <div className="grid gap-4 grid-cols-3">
                     <article className="w-full">
-                        <h4 className="font-bold text-lg text-(--secondary-color)">ADOPTE</h4>
+                        <h4 className="footer font-bold text-lg text-(--secondary-color)">ADOPTE</h4>
                         <p className="font-semibold">Notre mission est de trouver des foyers aimants pour chaque animal abandonné et de promouvoir le bien-être animal.</p>
 
                         <div className="flex flex-row g-10">
@@ -26,7 +26,7 @@ export default function Footer () {
                     </article>
 
                     <article className="w-full">
-                        <h4 className="font-bold text-lg text-(--secondary-color)">INFORMATIONS UTILES</h4>
+                        <h4 className="footer font-bold text-lg text-(--secondary-color)">INFORMATIONS UTILES</h4>
                         <ul className="leading-8">
                             <li><Link href="#">FAQs</Link></li>
                             <li><Link href="/guide">Conseils d'adoption</Link></li>
@@ -36,7 +36,7 @@ export default function Footer () {
                     </article>
 
                     <article className="w-full">
-                        <h4 className="font-bold text-lg text-(--secondary-color)">CONTACT</h4>
+                        <h4 className="footer font-bold text-lg text-(--secondary-color)">CONTACT</h4>
                         <p className="font-semibold">116 Rue du Faubourg Saint Martin</p>
                         <p className="font-semibold">75010 Paris, France</p>
                         <p className="font-semibold">Email: contact@adaopte.fr</p>

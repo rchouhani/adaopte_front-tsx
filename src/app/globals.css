@@ -6,6 +6,7 @@
   --light-color: #f9f9f9;
   --dark-color: #333;
   --footer-text: #8e8d8d;
+  --bg-homepage: #f7f5f5;
 
   --btn-primary-bg: #333;
   --btn-secondary-bg: #e74c3c;
@@ -42,4 +43,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  font-family: 'Amatic SC', cursive;
+}
+
+h2{
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-top: 5%;
+  text-transform: uppercase;
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  padding: 30px;
+  width: 50%;
+  color: var(--dark-color);
+}
+
+.footer{
+  font-family: 'Amatic SC', cursive;
 }
