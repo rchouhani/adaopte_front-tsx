@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import { Home, LogIn, Handshake, PersonStanding } from "lucide-react";
+import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +18,11 @@ const items = [
   {
     text: "Accueil",
     lucide: <Home />,
+    link: "/",
+  },
+   {
+    text: "J'adopte",
+    lucide: <Dog />,
     link: "/",
   },
   {
