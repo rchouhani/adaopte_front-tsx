@@ -1,36 +1,6 @@
 import QuestionsCard from "./QuestionsCard";
 
-const cardsContent = [
-  {
-    title: "🔎",
-    subtitle: "1. Trouver votre compagnon",
-    paragraph:
-      "Parcourez notre base de données d'animaux disponibles et utilisez nos filtres pour trouver celuiqui correspond à votre mode de vie.",
-  },
-  {
-    title: "📝",
-    subtitle: "2. Remplissez une demande",
-    paragraph:
-      "Soumttez votre formulaire d'adoption pour l'animal qui vous intéresse. Nous examinerons chaque demande avec soin.",
-  },
-  {
-    title: "👋🏾",
-    subtitle: "3. Rencontrez l'animal",
-    paragraph:
-      "Visitez le refuge pour rencontrer l'animal et voir si vous êtes compatible. C'est une étape essentielle du processus.",
-  },
-  {
-    title: "🏠",
-    subtitle: "4. Bienvenue à la maison",
-    paragraph:
-      "Une fois votre demande approuvée, vous pouvez accueillir votre nouvel.le ami.e chez vous. Nous restons disponibles pour vous conseiller.",
-  },
-  //   {
-  //     title: "",
-  //     subtitle: "",
-  //     paragraph: ""
-  //   }
-];
+import { cardsContent } from "../volunteersView/beVolunteer/page";
 
 export default function QuestionsArea() {
   return (

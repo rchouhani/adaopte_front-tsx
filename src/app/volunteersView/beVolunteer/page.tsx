@@ -11,6 +11,33 @@ const amatic = Amatic_SC({
   variable: "--font-amatic",
 });
 
+export const cardsContent = [
+  {
+    title: "🌱",
+    subtitle: "Agir concrètement pour le bien-être animal",
+    paragraph:
+    "Chaque geste compte : un regarde, une carsse"  
+  },
+  {
+    title: "📝",
+    subtitle: "2. Remplissez une demande",
+    paragraph:
+      "Soumttez votre formulaire d'adoption pour l'animal qui vous intéresse. Nous examinerons chaque demande avec soin.",
+  },
+  {
+    title: "👋🏾",
+    subtitle: "3. Rencontrez l'animal",
+    paragraph:
+      "Visitez le refuge pour rencontrer l'animal et voir si vous êtes compatible. C'est une étape essentielle du processus.",
+  },
+  {
+    title: "🏠",
+    subtitle: "4. Bienvenue à la maison",
+    paragraph:
+      "Une fois votre demande approuvée, vous pouvez accueillir votre nouvel.le ami.e chez vous. Nous restons disponibles pour vous conseiller.",
+  }
+];
+
 export default function beVolunteer() {
   return (
     <>
