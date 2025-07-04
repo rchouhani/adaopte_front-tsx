@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PROJET FULL STACK - ADAOPTE
 
-## Getting Started
+/- ... readme en cours de création ... -\
+/- ... merci de votre patience ... -\
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description du projet : 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Adaopte est un site internet permettant à des utilisateurs de donner de leur temps personnel pour s'occuper d'animaux, d'adopter un animal ou encore de faire un don pour le refuge.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Fonctionnalités : 
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies utilisées :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Pour le front : 
+    - TypeScript avec le framework Next.js
+    - Tailwind CSS
 
-## Deploy on Vercel
+- Pour le back : 
+    - Python avec le framework Django
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Pour la base de données relationnelle :
+    - PostgreSQL
+    - Neon
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Utilisation :
+
+Partie users : 
+- 
+
+Partie admin : 
+- 
+
+
+## Auteurs : 
+
+- Romain CHOUHANI (https://github.com/rchouhani)
+- Faty DIARRA (https://github.com/fatydm)
+- Edwige SAVES (https://github.com/Edwige08)

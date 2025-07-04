@@ -13,8 +13,8 @@ export default function AnimalsHomePage() {
           Chaque photo raconte une histoire et un espoir.
         </h3>
 
-        <section className="grid grid-cols-4 [grid-template-rows:repeat(3,200px)] shadow-md shadow-black/20 gap-2.5">
-          <div className="relative col-start-1 row-span-2">
+        <section className="grid grid-cols-4 [grid-template-rows:repeat(3,200px)]  gap-2.5">
+          <div className="relative col-start-1 row-span-2 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg"
@@ -24,7 +24,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-2 row-start-1">
+          <div className="relative col-start-2 row-start-1 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/chan-swan-NKyl19P5IHg-unsplash.jpg"
@@ -34,7 +34,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-3 row-span-2">
+          <div className="relative col-start-3 row-span-2 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/jae-park-7GX5aICb5i4-unsplash.jpg"
@@ -44,7 +44,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-4 row-start-1">
+          <div className="relative col-start-4 row-start-1 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg"
@@ -54,7 +54,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-1 row-start-3">
+          <div className="relative col-start-1 row-start-3 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg"
@@ -64,7 +64,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-2 row-span-2">
+          <div className="relative col-start-2 row-span-2 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/alan-king-KZv7w34tluA-unsplash.jpg"
@@ -74,7 +74,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-3 row-start-3">
+          <div className="relative col-start-3 row-start-3 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/yosei-g-OVgE3m4MHKM-unsplash.jpg"
@@ -84,7 +84,7 @@ export default function AnimalsHomePage() {
             />
           </div>
 
-          <div className="relative col-start-4 row-span-2">
+          <div className="relative col-start-4 row-span-2 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
               src="/assets/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
