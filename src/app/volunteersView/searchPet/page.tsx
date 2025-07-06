@@ -13,9 +13,7 @@ export default function SearchPet () {
         city: string,
         zipcode: string,
         pet_description: string,
-        image_url: string,
-        created_at: Date,
-        updated_at: Date
+        image_url: string
     }
 
 
@@ -41,7 +39,7 @@ export default function SearchPet () {
         {pets.map((pet) => (
           <p key={pet.id}>
             {pet.pet_name} {pet.breed}
-          </p>
+          </p>  
         ))}
      
     </>
