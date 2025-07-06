@@ -2,7 +2,6 @@ import Banner from "@/app/components/Banner";
 import QuestionsArea from "@/app/components/QuestionsArea";
 import LastQuestion from "@/app/components/LastQuestion";
 import Button from "@/app/components/Button";
-
 import { Amatic_SC } from "next/font/google";
 
 const amatic = Amatic_SC({
@@ -16,7 +15,7 @@ export const cardsContent = [
     title: "🌱",
     subtitle: "Agir concrètement pour le bien-être animal",
     paragraph:
-    "Chaque geste compte : un regarde, une carsse"  
+      "Chaque geste compte : un regarde, une carsse"
   },
   {
     title: "📝",
@@ -49,7 +48,12 @@ export default function beVolunteer() {
           paragraph="Offrez votre temps, changez des vies. Chez Adaopte, chaque bénévole contribue à redonner espoir aux animaux en attente d'un foyer."
         />
 
-        <QuestionsArea />
+        <QuestionsArea
+          title="Pourquoi devenir bénévole"
+          subtitle="Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est un engagement du coeur qui change des vies humaines et animales."
+          cards={cardsContent}
+        />
+
         <LastQuestion
           title="Des questions ?"
           subtitle="Nous sommes là pour répondre à toutes vos interrogations concernant le bénévolat chez Adaopte. N'hésitez pas à nous contacter pour en savoir sur notre démarche."
