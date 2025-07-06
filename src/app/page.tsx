@@ -1,13 +1,11 @@
 "use client";
 
 import { Amatic_SC } from "next/font/google";
-
 import Banner from "./components/Banner";
 import AnimalsHomePage from "./components/AnimalsHomePage";
 import QuestionsArea from "./components/QuestionsArea";
 import LastQuestion from "./components/LastQuestion";
 import Button from "./components/Button";
-
 import { useRouter } from "next/navigation";
 
 const amatic = Amatic_SC({
@@ -15,7 +13,6 @@ const amatic = Amatic_SC({
   subsets: ["latin"],
   variable: "--font-amatic",
 });
-
 
 export const cardsContent = [
   {
@@ -60,7 +57,12 @@ export default function Home() {
 
       <AnimalsHomePage />
 
-      <QuestionsArea />
+      <QuestionsArea
+        title="Comment ça marche"
+        subtitle="Adopter un animal est un enfagement sérieux et à long terme. Voici notre processus d'adoption en quelques étapes simples."
+        cards={cardsContent}
+      />
+      
       <section className="flex flex-col text-center">
         <LastQuestion
           title="Prêt.e à changer une vie ?"
