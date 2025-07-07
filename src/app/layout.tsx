@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,7 @@ const items = [
    {
     text: "J'adopte",
     lucide: <Dog />,
-    link: "/",
+    link: "/volunteersView/searchPet",
   },
   {
     text: "Je deviens bénévole",
@@ -59,6 +60,7 @@ export default function RootLayout({
       >
         <Navbar items={items}/>
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   );
