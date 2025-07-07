@@ -12,7 +12,9 @@ export default function TestimonialsArea() {
             image="/assets/omid-armin-yisZonvqh54-unsplash.jpg"
             title="Claire M."
             subtitle="Bénévole depuis 1 an"
-            paragraph="J'ai "/>
+            paragraph="J'ai commencé à m'occuper de Louna, une chienne timide arrivée au refuge. Petit à petit, elle m'a fait confiance. 
+            Aujourd'hui, elle a été adoptée, mais je garde un souvenir inoubliable de notre complicité. 
+            Être bénévole chez Adaopte, c'est offrir de l'amour... et en recevoir énormément."/>
       </main>
     </>
   );
