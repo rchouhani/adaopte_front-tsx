@@ -57,7 +57,6 @@ export default function Home() {
       <AnimalsHomePage />
 
       <QuestionsArea
-<<<<<<< HEAD
         title="Comment ça marche"
         subtitle="Adopter un animal est un enfagement sérieux et à long terme. Voici notre processus d'adoption en quelques étapes simples."
         cards={cardsContent}
