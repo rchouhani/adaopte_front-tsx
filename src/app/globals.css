@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --primary-color: #fffaf7;
   --secondary-color: #ff6d38;
@@ -11,6 +12,7 @@
   --btn-primary-bg: #333;
   --btn-secondary-bg: #e74c3c;
   --btn-accent-bg: #00a652;
+
   --btn-secondary-hover-bg: #333;
 
   --font-family-heading: 'Amatic SC', sans-serif;
