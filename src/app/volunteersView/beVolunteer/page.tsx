@@ -3,10 +3,14 @@
 import Banner from "@/app/components/Banner";
 import QuestionsArea from "@/app/components/QuestionsArea";
 import LastQuestion from "@/app/components/LastQuestion";
+<<<<<<< HEAD
 import Button from "@/app/components/UI/Button";
 
 import { useRouter } from "next/navigation";
 
+=======
+import Button from "@/app/components/Button";
+>>>>>>> 7d4c5e98c246c115a8be3621c237b2eba9518560
 import { Amatic_SC } from "next/font/google";
 import DonationButton from "@/app/components/UI/DonationButton";
 import ContactButton from "@/app/components/UI/ContactButton";
@@ -23,7 +27,11 @@ const cardsContentVolunteer = [
     title: "🌱",
     subtitle: "Agir concrètement pour le bien-être animal",
     paragraph:
+<<<<<<< HEAD
       "Chaque geste compte : un regard, une caresse, une balade... Vous contribuez à redonner confiance aux animaux abandonnés et à leur offrir une seconde chance.",
+=======
+      "Chaque geste compte : un regarde, une carsse"
+>>>>>>> 7d4c5e98c246c115a8be3621c237b2eba9518560
   },
   {
     title: "🧠",
@@ -59,9 +67,20 @@ export default function BeVolunteer() {
         />
 
         <QuestionsArea
+<<<<<<< HEAD
           title="Pourquoi devenir bénévole ?"
           subtitle="Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est un engagement du coeur, qui change des vies - humaines et animales. "
           cards={cardsContentVolunteer}
+=======
+          title="Pourquoi devenir bénévole"
+          subtitle="Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est un engagement du coeur qui change des vies humaines et animales."
+          cards={cardsContent}
+        />
+
+        <LastQuestion
+          title="Des questions ?"
+          subtitle="Nous sommes là pour répondre à toutes vos interrogations concernant le bénévolat chez Adaopte. N'hésitez pas à nous contacter pour en savoir sur notre démarche."
+>>>>>>> 7d4c5e98c246c115a8be3621c237b2eba9518560
         />
 
         <section className="flex flex-col text-center">
