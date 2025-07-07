@@ -1,10 +1,5 @@
 'use client'
 
-<<<<<<< HEAD
-import { useEffect, useState } from "react";
-
-export default function SearchPet () {
-=======
 import { Amatic_SC } from "next/font/google";
 import { ReactNode, useEffect, useState } from "react";
 
@@ -15,7 +10,6 @@ const amatic = Amatic_SC({
 });
 
 export default function SearchPet (props: { width: number, height: number}) {
->>>>>>> 7810476415c13dbbb818397743548f3ddb97daeb
     interface Pet {
         id: number,
         pet_name: string,

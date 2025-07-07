@@ -1,6 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
 import AdoptButton from "./components/UI/AdoptButton";
 import AnimalsHomePage from "./components/AnimalsHomePage";
 import Banner from "./components/Banner";
@@ -8,16 +7,6 @@ import BeVolunteerButton from "./components/UI/BeVolunteerButton";
 import DonationButton from "./components/UI/DonationButton";
 import LastQuestion from "./components/LastQuestion";
 import QuestionsArea from "./components/QuestionsArea";
-=======
-import Banner from "./components/Banner";
-import AnimalsHomePage from "./components/AnimalsHomePage";
-import QuestionsArea from "./components/QuestionsArea";
-import LastQuestion from "./components/LastQuestion";
-import Button from "./components/UI/Button";
-
-import DonationButton from "./components/UI/DonationButton";
-import AdoptButton from "./components/UI/AdoptButton";
->>>>>>> 7810476415c13dbbb818397743548f3ddb97daeb
 
 import { Amatic_SC } from "next/font/google";
 const amatic = Amatic_SC({
@@ -68,13 +57,8 @@ export default function Home() {
       <AnimalsHomePage />
 
       <QuestionsArea
-<<<<<<< HEAD
         title="Comment ça marche"
         subtitle="Adopter un animal est un enfagement sérieux et à long terme. Voici notre processus d'adoption en quelques étapes simples."
-=======
-        title="Comment ça marche ?"
-        subtitle="Adopter un animal est un engagement sérieux et à long terme. Voici votre processus en quelques étapes simples. "
->>>>>>> 7810476415c13dbbb818397743548f3ddb97daeb
         cards={cardsContent}
       />
 
