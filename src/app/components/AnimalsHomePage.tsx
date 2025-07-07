@@ -1,19 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./UI/Button";
+
+import { useRouter } from "next/navigation";
 
 export default function AnimalsHomePage() {
+  const router = useRouter();
+
   return (
     <>
       <main className="flex flex-col items-center text-center p-[30px] bg-(--bg-homepage) -mt-[70px] pt-[70px]">
-        <h2>
-          Nos animaux à adopter
-        </h2>
+        <h2>Nos animaux à adopter</h2>
         <h3>
           Découvrez en image tous nos animaux qui attendent une famille aimante.
           Chaque photo raconte une histoire et un espoir.
         </h3>
 
-        <section className="grid grid-cols-4 [grid-template-rows:repeat(3,200px)]  gap-2.5">
+        <section className="grid grid-cols-4 [grid-template-rows:repeat(3,200px)] gap-2.5 mb-[40px]">
           <div className="relative col-start-1 row-span-2 shadow-xl shadow-black/20">
             <Image
               className="w-full h-full object-cover rounded cursor-pointer"
@@ -94,9 +97,11 @@ export default function AnimalsHomePage() {
             />
           </div>
         </section>
-        <button className="mt-[40px] mb-[20px] bg-(--dark-color) text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8d8c8c]">
-          <Link href="/volunteersView/searchPet">Voir tous les animaux</Link>
-        </button>
+        <Button
+          label="Voir tous les animaux"
+          onClick={() => router.push("/volunteersView/searchPet")}
+          classes="mt-[60px] mb-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
+        />
       </main>
     </>
   );
