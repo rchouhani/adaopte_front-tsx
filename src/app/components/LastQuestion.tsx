@@ -22,7 +22,9 @@ export default function LastQuestion({
         <h2>{title}</h2>
         <h3>{subtitle}</h3>
 
-        <div className="flex items-center justify-center gap-10 w-[80%]">{children}</div>
+        <div className="flex items-center justify-center gap-10 w-[80%]">
+          {children}
+        </div>
       </main>
     </>
   );
