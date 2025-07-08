@@ -60,7 +60,7 @@ export default function RootLayout({
       >
         <Navbar items={items}/>
         {children}
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   );

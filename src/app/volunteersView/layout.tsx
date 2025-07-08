@@ -35,7 +35,6 @@ export default function VolunteersViewLayout({
     <>
       <Navbar items={items} />
       <main>{children}</main>
-      <Footer />
     </>
   );
 }

@@ -5,6 +5,7 @@ import axios from "axios";
 import Button from "./UI/Button";
 import { useRouter } from "next/navigation";
 import Input from "./UI/Input";
+import Link from "next/link";
 
 export default function FormSignIn() {
   //   const [password, setPassword] = useState<string>();
@@ -56,8 +57,10 @@ export default function FormSignIn() {
           label="Se connecter"
           classes=" mt-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
         />
-      
       </form>
+      <Link href="/signUp">
+        <p>Je n'ai pas encore de compte</p>
+      </Link>
       <p>{message}</p>
     </main>
   );
