@@ -13,17 +13,15 @@ export default function TestimonialsCard({
 }: TestimonialsCardProps) {
   return (
     <>
-      <article className="w-4/4 h-auto border border-white shadow-[0_5px_15px_rgba(0,0,0,0.1)] rounded-[20px]">
-        <div className="flex flex-col">
-          <div  >
-            <img className="rounded-full" src={image}></img>
-          </div>
-          <div>
-            <p>{title}</p>
-            <p>{subtitle}</p>
+      <article className="border border-white rounded-lg bg-white shadow-[0_5px_15px_rgba(0,0,0,0.1)] m-[10px] p-[20px]">
+        <div className="flex items-center gap-4 mb-[20px]">
+          <img className="w-[50px] h-[50px] object-cover rounded-full" src={image} ></img>
+          <div className="flex flex-col items-start">
+            <p className="font-bold">{title}</p>
+            <p className="text-[#8e8d8d] text-sm">{subtitle}</p>
           </div>
         </div>
-        <p>{paragraph}</p>
+        <p className="italic">{paragraph}</p>
       </article>
     </>
   );
