@@ -19,23 +19,25 @@ export default function AnimalGrid() {
     }
 
     const today = new Date();
-    const thisYear = today.getFullYear();
+    const thisYear: number = today.getFullYear();
 
-    const [pets, setPets] = useState<Pet[]>([])
+    const [pets, setPets] = useState<Pet[]>([]);
 
     useEffect(() => {
         async function getPets() {
             const response = await fetch('http://127.0.0.1:8000/api/pets/');
             const data = await response.json();
             setPets(data);
-            console.log(data)
+            console.log(data);
         }
         getPets();
     }, []);
 
     return (
-        <div>
+        <div className="flex flex-wrap gap-3 justify-evenly pt-5">
             {pets.map((pet) => {
+                const birthYear = new Date(pet.birthyear)
+                const petAge: number = thisYear - birthYear.getFullYear();
                 return (
                     <AnimalCard
                         key={pet.id}
@@ -44,7 +46,7 @@ export default function AnimalGrid() {
                         name={pet.pet_name}
                         imageUrl={pet.image_url}
                         race={pet.breed}
-                        age={thisYear - pet.birthyear.getFullYear()}
+                        age={petAge}
                         localisation={pet.city}
                         description={pet.pet_description}
                     />
