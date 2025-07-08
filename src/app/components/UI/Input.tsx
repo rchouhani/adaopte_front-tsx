@@ -3,6 +3,8 @@ export default function Input(props: {
   type: string;
   placeholder: string;
   onChange?: any;
+  value?: any
+  classes?: string
 }) {
   return (
     <>

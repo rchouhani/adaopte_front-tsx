@@ -56,7 +56,6 @@ export default function FormSignIn() {
           label="Se connecter"
           classes=" mt-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
         />
-      
       </form>
       <p>{message}</p>
     </main>
