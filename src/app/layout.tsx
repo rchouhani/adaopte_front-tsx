@@ -21,26 +21,26 @@ const items = [
     lucide: <Home />,
     link: "/",
   },
-   {
+  {
     text: "J'adopte",
     lucide: <Dog />,
     link: "/volunteersView/searchPet",
   },
   {
     text: "Je deviens bénévole",
-    lucide: <PersonStanding/>,
+    lucide: <PersonStanding />,
     link: "/volunteersView/beVolunteer",
   },
   {
     text: "Je donne",
-    lucide: <Handshake/>,
-    link: "/",
+    lucide: <Handshake />,
+    link: "/volunteersView/donation",
   },
   {
     text: "Je me connecte",
-    lucide: <LogIn/>,
+    lucide: <LogIn />,
     link: "/logIn",
-  }
+  },
 ];
 
 export const metadata: Metadata = {
@@ -58,7 +58,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar items={items}/>
+        <Navbar items={items} />
         {children}
         <Footer/>
       </body>
