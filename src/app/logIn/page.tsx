@@ -1,6 +1,8 @@
+// import { useEffect } from "react";
 import Banner from "../components/Banner";
 
 import { Amatic_SC } from "next/font/google";
+import FormSignIn from "../components/FormSignIn";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],
@@ -9,14 +11,23 @@ const amatic = Amatic_SC({
 });
 
 export default function LogIn() {
-  return(
-  <>
-    <Banner
-      src="/assets/login_adoption.webp"
-      alt="image bannière"
-      title="Je me connecte"
-      paragraph="Merci de bien entrer ton pseudo et ton mot de passe"
-    />
-  </>
-  )
+
+  // useEffect(() => {
+  //   async function authentification() {
+      
+  //   }
+  // })
+  
+  return (
+    <>
+      <Banner
+        src="/assets/login_adoption.webp"
+        alt="image bannière"
+        title="Je me connecte"
+        paragraph="Merci de bien entrer ton pseudo et ton mot de passe"
+      />
+
+      <FormSignIn />
+    </>
+  );
 }
