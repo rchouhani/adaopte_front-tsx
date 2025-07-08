@@ -25,7 +25,7 @@ export default function AnimalGrid() {
 
     useEffect(() => {
         async function getPets() {
-            const response = await fetch('http://127.0.0.1:8000/api/pets/');
+            const response = await fetch('http://127.0.0.1:8000/api/pets_available/');
             const data = await response.json();
             setPets(data);
             console.log(data);
