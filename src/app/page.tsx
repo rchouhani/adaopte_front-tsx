@@ -41,7 +41,7 @@ const items = [
   {
     text: "Je me connecte",
     lucide: <LogIn />,
-    link: "/SignIn",
+    link: "/signIn",
   },
 ];
 
