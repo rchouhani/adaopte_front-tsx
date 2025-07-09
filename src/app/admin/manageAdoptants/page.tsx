@@ -5,3 +5,9 @@ const amatic = Amatic_SC({
   subsets: ["latin"],
   variable: "--font-amatic",
 });
+
+export default function ManageAdoptants() {
+    return (
+        <h2>Manage adoptants</h2>
+    )
+};

@@ -7,6 +7,8 @@ import BeVolunteerButton from "./components/UI/BeVolunteerButton";
 import DonationButton from "./components/UI/DonationButton";
 import LastQuestion from "./components/LastQuestion";
 import QuestionsArea from "./components/QuestionsArea";
+import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
+import Navbar from "@/app/components/Navbar";
 
 import { Amatic_SC } from "next/font/google";
 const amatic = Amatic_SC({
@@ -15,7 +17,35 @@ const amatic = Amatic_SC({
   variable: "--font-amatic",
 });
 
-export default function Home() {
+const items = [
+  {
+    text: "Accueil",
+    lucide: <Home />,
+    link: "/",
+  },
+  {
+    text: "J'adopte",
+    lucide: <Dog />,
+    link: "/volunteersView/searchPet",
+  },
+  {
+    text: "Je deviens bénévole",
+    lucide: <PersonStanding />,
+    link: "/volunteersView/beVolunteer",
+  },
+  {
+    text: "Je donne",
+    lucide: <Handshake />,
+    link: "/volunteersView/donation",
+  },
+  {
+    text: "Je me connecte",
+    lucide: <LogIn />,
+    link: "/SignIn",
+  },
+];
+
+export default function Page() {
   const cardsContent = [
     {
       title: "🔎",
@@ -45,6 +75,7 @@ export default function Home() {
 
   return (
     <>
+      <Navbar items={items} />
       <div className="relative">
         <Banner
           src="/assets/background.jpg"

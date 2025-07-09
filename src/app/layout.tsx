@@ -15,33 +15,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const items = [
-  {
-    text: "Accueil",
-    lucide: <Home />,
-    link: "/",
-  },
-  {
-    text: "J'adopte",
-    lucide: <Dog />,
-    link: "/volunteersView/searchPet",
-  },
-  {
-    text: "Je deviens bénévole",
-    lucide: <PersonStanding />,
-    link: "/volunteersView/beVolunteer",
-  },
-  {
-    text: "Je donne",
-    lucide: <Handshake />,
-    link: "/volunteersView/donation",
-  },
-  {
-    text: "Je me connecte",
-    lucide: <LogIn />,
-    link: "/logIn",
-  },
-];
+// const items = [
+//   {
+//     text: "Accueil",
+//     lucide: <Home />,
+//     link: "/",
+//   },
+//   {
+//     text: "J'adopte",
+//     lucide: <Dog />,
+//     link: "/volunteersView/searchPet",
+//   },
+//   {
+//     text: "Je deviens bénévole",
+//     lucide: <PersonStanding />,
+//     link: "/volunteersView/beVolunteer",
+//   },
+//   {
+//     text: "Je donne",
+//     lucide: <Handshake />,
+//     link: "/volunteersView/donation",
+//   },
+//   {
+//     text: "Je me connecte",
+//     lucide: <LogIn />,
+//     link: "/SignIn",
+//   },
+// ];
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -58,7 +58,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar items={items} />
+        {/* <Navbar items={items} /> */}
         {children}
         <Footer/>
       </body>

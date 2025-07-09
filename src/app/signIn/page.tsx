@@ -5,6 +5,8 @@ import { Amatic_SC } from "next/font/google";
 import FormSignIn from "../components/FormSignIn";
 import FormSignUp from "../components/FormSignUp";
 import Button from "../components/UI/Button";
+import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
+import Navbar from "@/app/components/Navbar";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],
@@ -12,7 +14,35 @@ const amatic = Amatic_SC({
   variable: "--font-amatic",
 });
 
-export default function LogIn() {
+const items = [
+  {
+    text: "Accueil",
+    lucide: <Home />,
+    link: "/",
+  },
+  {
+    text: "J'adopte",
+    lucide: <Dog />,
+    link: "/volunteersView/searchPet",
+  },
+  {
+    text: "Je deviens bénévole",
+    lucide: <PersonStanding />,
+    link: "/volunteersView/beVolunteer",
+  },
+  {
+    text: "Je donne",
+    lucide: <Handshake />,
+    link: "/volunteersView/donation",
+  },
+  {
+    text: "Je me connecte",
+    lucide: <LogIn />,
+    link: "/SignIn",
+  },
+];
+
+export default function SignIn() {
   // useEffect(() => {
   //   async function authentification() {
 
@@ -21,6 +51,7 @@ export default function LogIn() {
 
   return (
     <>
+      <Navbar items={items} />
       <Banner
         src="/assets/login_adoption.webp"
         alt="image bannière"
