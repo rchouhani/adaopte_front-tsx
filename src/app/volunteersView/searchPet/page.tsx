@@ -10,7 +10,7 @@ const amatic = Amatic_SC({
   variable: "--font-amatic",
 });
 
-export default function SearchPet(props: { width: number, height: number }) {
+export default function SearchPet() {
   return (
     <>
       <SearchBar />

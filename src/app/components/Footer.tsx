@@ -29,7 +29,7 @@ export default function Footer () {
                         <h4 className="footer font-bold text-2xl text-[#ff6d38] mb-5">INFORMATIONS UTILES</h4>
                         <ul className="leading-8">
                             <li><Link href="#">FAQs</Link></li>
-                            <li><Link href="/guide">Conseils d'adoption</Link></li>
+                            <li><Link href="/guide">Conseils d&apos;adoption</Link></li>
                             <li><Link href="#">Nous contacter</Link></li>
                             <li><Link href="#">Mentions légales</Link></li>
                         </ul>
@@ -46,7 +46,7 @@ export default function Footer () {
 
                 <div className="pt-10 text-center text-xs font-extralight">
                     <p className="text-(--footer-text)"> © 2025 Adaopte. Tous droits réservés.</p>
-                    <p className="text-(--footer-text)">Ce site est développé dans le cadre d'un projet ADA Tech School.</p>
+                    <p className="text-(--footer-text)">Ce site est développé dans le cadre d&apos;un projet ADA Tech School.</p>
                 </div>
             </div>
         </>

@@ -74,7 +74,7 @@ export default function Page() {
   ];
 
   return (
-    <>
+    <main className={`${amatic.variable}`}>
       <Navbar items={items} />
       <div className="relative">
         <Banner
@@ -101,6 +101,6 @@ export default function Page() {
         <DonationButton />
         <BeVolunteerButton />
       </LastQuestion>
-    </>
+    </main>
   );
 }

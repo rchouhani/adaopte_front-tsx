@@ -7,6 +7,8 @@ const amatic = Amatic_SC({
 
 export default function ManagePets() {
     return (
+      <main className={`${amatic.variable}`}>
         <h2>Manage Pets</h2>
+      </main>
     )
 };

@@ -5,7 +5,6 @@ import { Amatic_SC } from "next/font/google";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Button from "../components/UI/Button";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
@@ -65,10 +64,10 @@ export default function SignUp() {
   };
 
   return (
-    <>
+    <main className={`${amatic.variable} relative aspect-[16/9]`}>
       <Navbar items={items} />
 
       <FormSignUp onChange={console.log("hello")} />
-    </>
+    </main>
   );
 }

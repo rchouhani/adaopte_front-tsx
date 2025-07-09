@@ -6,7 +6,9 @@ const amatic = Amatic_SC({
 });
 
 export default function SeeDonations() {
-    return (
-        <h2>See donations</h2>
-    )
-};
+  return (
+    <main className={`${amatic.variable}`}>
+      <h2>See donations</h2>
+    </main>
+  );
+}
