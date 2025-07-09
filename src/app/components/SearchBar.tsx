@@ -5,13 +5,13 @@ export default function SearchBar() {
         <div>
             <form action="submit">
                 <div>
-                    <label htmlFor="animal_type">Type d'animal</label>
+                    <label htmlFor="animal_type">Type d&apos;animal</label>
                     <select name="animal_type" id="">
                         <option value="all">Tous les animaux</option>
                         <option value="dog">Chien</option>
                         <option value="cat">Chat</option>
                         <option value="hamster">Hamster</option>
-                        <option value="guinea pig">Cochon d'inde</option>
+                        <option value="guinea pig">Cochon d&apos;inde</option>
                         <option value="rabbit">Lapin</option>
                     </select>
                 </div>

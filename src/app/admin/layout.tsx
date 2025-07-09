@@ -1,7 +1,5 @@
-// import "./globals.css";
 import Navbar from "@/app/components/Navbar";
-import type { ReactNode } from "react";
-import { House, Bone, Dog, Squirrel, PiggyBank } from "lucide-react";
+import { House, Bone, Dog, PiggyBank } from "lucide-react";
 
 const navBarItems = [
   {

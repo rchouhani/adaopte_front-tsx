@@ -6,7 +6,7 @@ import Input from "./UI/Input";
 import axios from "axios";
 import { useState } from "react";
 
-export default function FormSignUp(props: { onChange: any }) {
+export default function FormSignUp() {
   const router = useRouter();
   const [form, setForm] = useState({
     firstname: "",
@@ -19,7 +19,7 @@ export default function FormSignUp(props: { onChange: any }) {
     birthdate: "",
     motivation: "",
   });
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("Vous êtes connecté.e");
 
   const handleChange = (e: any) => {
     console.log(form)
@@ -107,6 +107,8 @@ export default function FormSignUp(props: { onChange: any }) {
             label="> Créer <"
             classes=" mt-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-auto px-3 hover:bg-[#8e8d8d]"
           />
+          <p>{message}</p>
+
         </form>
       </main>
     </>

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 
 type LastQuestionsProps = {
   title: string;
@@ -14,7 +13,6 @@ export default function LastQuestion({
   subtitle,
   children,
 }: LastQuestionsProps) {
-  const router = useRouter();
 
   return (
     <>

@@ -3,8 +3,6 @@ import Banner from "../components/Banner";
 
 import { Amatic_SC } from "next/font/google";
 import FormSignIn from "../components/FormSignIn";
-import FormSignUp from "../components/FormSignUp";
-import Button from "../components/UI/Button";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
@@ -43,14 +41,8 @@ const items = [
 ];
 
 export default function SignIn() {
-  // useEffect(() => {
-  //   async function authentification() {
-
-  //   }
-  // })
-
   return (
-    <>
+    <main className={`${amatic.variable} relative aspect-[16/9]`}>
       <Navbar items={items} />
       <Banner
         src="/assets/login_adoption.webp"
@@ -60,26 +52,6 @@ export default function SignIn() {
       />
 
       <FormSignIn />
-
-
-      {/* <div className="flex flex-row gap-5 items-center justify-center">
-        <Button
-          type="submit"
-          label="Se connecter"
-          classes=" mt-[40px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
-        />
-
-        <Button
-          type="submit"
-          label="Créer un Compte"
-          classes=" mt-[40px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
-        />
-      </div> */}
-
-      {/* <div className="flex flex-row items-center gap-5 justify-evenly">
-        <FormSignIn />
-        <FormSignUp onChange={console.log("titi")} />
-      </div> */}
-    </>
+    </main>
   );
 }

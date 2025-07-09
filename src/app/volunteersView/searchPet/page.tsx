@@ -1,7 +1,6 @@
 'use client'
 
 import AnimalGrid from "@/app/components/AnimalGrid";
-import SearchBar from "@/app/components/searchBar";
 import { Amatic_SC } from "next/font/google";
 
 const amatic = Amatic_SC({
@@ -10,11 +9,11 @@ const amatic = Amatic_SC({
   variable: "--font-amatic",
 });
 
-export default function SearchPet(props: { width: number, height: number }) {
+export default function SearchPet() {
   return (
-    <>
+    <main className={`${amatic.variable}`}>
     {/* <SearchBar /> */}
     <AnimalGrid />
-    </>
+    </main>
   );
 }

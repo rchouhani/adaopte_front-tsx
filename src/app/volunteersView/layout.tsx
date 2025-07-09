@@ -1,7 +1,6 @@
 import Navbar from "@/app/components/Navbar";
 import { House, Bone, Dog, Squirrel } from "lucide-react";
 import type { ReactNode } from "react";
-import Footer from "../components/Footer";
 
 const items = [
   {

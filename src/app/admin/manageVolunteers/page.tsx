@@ -6,7 +6,9 @@ const amatic = Amatic_SC({
 });
 
 export default function ManageVolunteers() {
-    return (
-        <h2>Manage volunteers</h2>
-    )
-};
+  return (
+    <main className={`${amatic.variable}`}>
+      <h2>Manage volunteers</h2>
+    </main>
+  );
+}

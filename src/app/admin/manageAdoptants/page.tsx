@@ -8,6 +8,9 @@ const amatic = Amatic_SC({
 
 export default function ManageAdoptants() {
     return (
-        <h2>Manage adoptants</h2>
+      <main className={`${amatic.variable}`}>
+      
+      <h2>Manage adoptants</h2>
+      </main>
     )
 };

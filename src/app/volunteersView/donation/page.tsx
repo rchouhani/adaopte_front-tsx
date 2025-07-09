@@ -41,7 +41,7 @@ export default function Donation() {
         title="Offrez un avenir aux animaux sans famille"
         paragraph="Prise en charge des animaux abandonnés ou maltraités, lutte contre les souffrances animales, campagnes de sensibilisation, actions auprès des pouvoirs publics pour faire progresser la cause animale…"
       />
-      <main className="flex flex-col items-center text-center p-[30px] bg-(--bg-homepage) -mt-[20px] pt-[30px]">
+      <main className={`${amatic.variable} relative aspect-[16/9] flex flex-col items-center text-center p-[30px] bg-(--bg-homepage) -mt-[20px] pt-[30px]`}>
         <form
           className="p-8 border border-white rounded-md flex flex-col gap-4 w-full max-w-md"
           onSubmit={handleSubmit}

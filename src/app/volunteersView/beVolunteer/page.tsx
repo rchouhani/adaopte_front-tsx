@@ -6,8 +6,9 @@ import FaqButton from "@/app/components/UI/FaqButton";
 import LastQuestion from "@/app/components/LastQuestion";
 import QuestionsArea from "@/app/components/QuestionsArea";
 
-import { Amatic_SC } from "next/font/google";
 import TestimonialsArea from "@/app/components/TestimonialsArea";
+
+import { Amatic_SC } from "next/font/google";
 const amatic = Amatic_SC({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -44,7 +45,7 @@ const cardsContentVolunteer = [
 export default function BeVolunteer() {
   return (
     <>
-      <main className="relative aspect-[16/9]">
+      <main className={`${amatic.variable} relative aspect-[16/9]`}>
         <Banner
           src="/assets/alin-luna-8LfPXM6abRk-unsplash.jpg"
           alt="image bannière"
