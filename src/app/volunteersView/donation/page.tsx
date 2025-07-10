@@ -13,12 +13,12 @@ const amatic = Amatic_SC({
 });
 
 export default function Donation() {
-  const [amount, setAmount] = useState<number | string>("");
+  const [amount, setAmount] = useState<number>();
   const [message, setMessage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAmount(e.target.value);
+    setAmount(parseInt(e.target.value));
   };
 
   const handleSubmit = (e: React.FormEvent) => {

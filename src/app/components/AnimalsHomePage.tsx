@@ -97,7 +97,6 @@ export default function AnimalsHomePage() {
           </div>
         </section>
         <Button
-          type
           label="Voir tous les animaux"
           onClick={() => router.push("/volunteersView/searchPet")}
           classes="mt-[60px] mb-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
