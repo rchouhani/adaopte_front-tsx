@@ -6,7 +6,11 @@ import Input from "./UI/Input";
 import axios from "axios";
 import { useState } from "react";
 
-export default function FormSignUp() {
+type FormSignUpProps = {
+    onChange: () => void;
+};
+
+export default function FormSignUp({ onChange }: FormSignUpProps) {
   const router = useRouter();
   const [form, setForm] = useState({
     firstname: "",
@@ -21,12 +25,12 @@ export default function FormSignUp() {
   });
   const [message, setMessage] = useState("Vous êtes connecté.e");
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(form)
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:8000/api/users/create/", form);

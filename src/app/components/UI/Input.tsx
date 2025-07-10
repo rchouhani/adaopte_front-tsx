@@ -2,7 +2,7 @@ export default function Input(props: {
   name: string;
   type: string;
   placeholder: string;
-  onChange?: any;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
   value?: any
   classes?: string
 }) {
