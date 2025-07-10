@@ -6,11 +6,11 @@ import Input from "./UI/Input";
 import axios from "axios";
 import { useState } from "react";
 
-type FormSignUpProps = {
-    onChange: () => void;
-};
+// type FormSignUpProps = {
+//   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+// };
 
-export default function FormSignUp({ onChange }: FormSignUpProps) {
+export default function FormSignUp() {
   const router = useRouter();
   const [form, setForm] = useState({
     firstname: "",
@@ -26,18 +26,22 @@ export default function FormSignUp({ onChange }: FormSignUpProps) {
   const [message, setMessage] = useState("Vous êtes connecté.e");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(form)
+    console.log(form);
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/api/users/create/", form);
+      await axios.post("http://localhost:8000/api/users/create/", form);
       setMessage("Compte créé avec succès !");
       router.push("/logIn");
-    } catch (err: any) {
-      setMessage("Erreur : " + JSON.stringify(err.response.data));
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setMessage("Erreur : " + JSON.stringify(err.response?.data));
+      } else {
+        setMessage("Une erreur inconnue est survenue.");
+      }
     }
   };
 
@@ -112,7 +116,6 @@ export default function FormSignUp({ onChange }: FormSignUpProps) {
             classes=" mt-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-auto px-3 hover:bg-[#8e8d8d]"
           />
           <p>{message}</p>
-
         </form>
       </main>
     </>

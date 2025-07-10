@@ -51,7 +51,7 @@ export default function SignIn() {
         paragraph="Merci de bien entrer ton pseudo et ton mot de passe"
       />
 
-      <FormSignIn />
+      <FormSignIn/>
     </main>
   );
 }

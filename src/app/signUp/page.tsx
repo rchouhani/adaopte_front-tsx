@@ -44,16 +44,11 @@ const items = [
 
 export default function SignUp() {
   const router = useRouter()
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    const [form, setForm] = useState({ email: "", password: "" });
-    const [message, setMessage] = useState("");
-    const router = useRouter();
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [message, setMessage] = useState("");
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
-
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>  {
+    
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:8000/api/register/", form);
@@ -64,15 +59,15 @@ export default function SignUp() {
     }
   };
 
-    const handleTest = () => {
-      console.log("hello")
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setForm({ ...form, [e.target.name]: e.target.value });
     };
 
   return (
     <main className={`${amatic.variable} relative aspect-[16/9]`}>
       <Navbar items={items} />
 
-      <FormSignUp onChange={handleTest} />
+      <FormSignUp onChange={handleChange} />
     </main>
   );
 }

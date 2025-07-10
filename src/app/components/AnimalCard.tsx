@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AnimalCard(props: {
   index: number;
@@ -9,17 +10,20 @@ export default function AnimalCard(props: {
   age: number;
   localisation: string;
   description: string;
+  classes?: string;
 }) {
   return (
     <Link
       href={`/animal/${props.index}`}
-      className="flex flex-col rounded-md overflow-hidden shadow-md w-[300px]"
+      className="flex flex-col rounded-md  shadow-md w-[300px]"
     >
-      <div className="flex justify-center items-center h-[200px] overflow-hidden">
-        <img
+      <div className="flex justify-center items-center h-[200px] overflow-hidden ">
+        <Image
           src={props.imageUrl}
           alt={`Photo de ${props.type}`}
-          className="w-full h-full object-cover box-border"
+          width={500}
+          height={500}
+          className=" object-cover object-top w-full h-full"
         />
       </div>
 

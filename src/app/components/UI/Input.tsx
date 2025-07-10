@@ -2,8 +2,8 @@ export default function Input(props: {
   name: string;
   type: string;
   placeholder: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  value?: any
+  onChange?: React.ChangeEventHandler<HTMLInputElement> ;
+  value?: number
   classes?: string
 }) {
   return (
