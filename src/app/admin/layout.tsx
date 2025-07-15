@@ -1,5 +1,8 @@
 import Navbar from "@/app/components/Navbar";
 import { House, Bone, Dog, PiggyBank, Home, LogOut } from "lucide-react";
+import ManageVolunteers from "./manageVolunteers/page";
+import VolunteerPage from "./manageVolunteers/[id]/page";
+
 
 const navBarItems = [
   {
@@ -25,12 +28,7 @@ const navBarItems = [
   {
     text: "See donations",
     lucide: <PiggyBank />,
-    link: "/admin/seeDonations",
-  },
-  {
-    text: "Je me déconnecte",
-    lucide: <LogOut />,
-    link: "/signIn",
+    link: "/admin/seeDonatios",
   },
 ];
 
