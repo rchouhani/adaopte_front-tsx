@@ -30,7 +30,7 @@ export default function FormSignIn() {
 
       console.log(res.data);
 
-      setMessage("Compte créé avec succès !");
+      setMessage("Vous êtes connecté");
       router.push("/");
     } catch (err) {
       if (axios.isAxiosError(err)) {
