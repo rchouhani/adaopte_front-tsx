@@ -1,13 +1,18 @@
 import Navbar from "@/app/components/Navbar";
-import { House, Bone, Dog, PiggyBank } from "lucide-react";
+import { House, Bone, Dog, PiggyBank, Home, LogOut } from "lucide-react";
 import ManageVolunteers from "./manageVolunteers/page";
 import VolunteerPage from "./manageVolunteers/[id]/page";
 
 
 const navBarItems = [
   {
+    text: "Accueil",
+    lucide: <Home />,
+    link: "/",
+  },
+  {
     text: "Manage Adoptants",
-    lucide: <Bone/>,
+    lucide: <Bone />,
     link: "/admin/manageAdoptants",
   },
   {
@@ -17,13 +22,13 @@ const navBarItems = [
   },
   {
     text: "Manage Volunteers",
-    lucide: <House/>,
+    lucide: <House />,
     link: "admin/manageVolunteers",
   },
   {
     text: "See donations",
     lucide: <PiggyBank />,
-    link: "/admin/seeDonations",
+    link: "/admin/seeDonatios",
   },
 ];
 

@@ -1,5 +1,5 @@
 import Navbar from "@/app/components/Navbar";
-import { House, Bone, Dog, Squirrel } from "lucide-react";
+import { House, Bone, Dog, Squirrel, LogOut } from "lucide-react";
 import type { ReactNode } from "react";
 
 const items = [
@@ -10,18 +10,23 @@ const items = [
   },
   {
     text: "J'adopte",
-    lucide: <Bone />,
+    lucide: <Dog />,
     link: "/volunteersView/searchPet",
   },
   {
     text: "Guide de l'adoption",
-    lucide: <Dog />,
+    lucide: <Bone />,
     link: "https://www.defensedelanimal.fr/wp-content/uploads/2022/03/Guide-de-la-belle-adoption-WEB.pdf",
   },
   {
     text: "Devenir bénévole",
     lucide: <Squirrel />,
     link: "/volunteersView/beVolunteer",
+  },
+  {
+    text: "Je me déconnecte",
+    lucide: <LogOut />,
+    link: "/signIn",
   },
 ];
 
