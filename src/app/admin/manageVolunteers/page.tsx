@@ -25,7 +25,7 @@ export default function ManageVolunteers() {
   useEffect(() => {
     async function getUsers() {
       const response = await fetch(
-        "https://adaopterofated.vercel.app/api/users/"
+        "http://localhost:8000/api/users/"
       );
       const data = await response.json();
       setUsers(data);

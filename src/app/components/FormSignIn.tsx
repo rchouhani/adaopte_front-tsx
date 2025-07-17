@@ -19,18 +19,21 @@ export default function FormSignIn() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      console.log('😁😁', form)
-      const res = await axios.post(
-        "http://localhost:8000/api/login/",
-        form, 
-        {
-          withCredentials: true, // important pour accepter les cookies du backend
-        }
-      );
+      console.log("😁😁", form);
+      const res = await axios.post("http://localhost:8000/api/login/", form, {
+        withCredentials: true, // important pour accepter les cookies du backend
+      });
 
       console.log(res.data);
 
+      const accessToken = res.data.access;
+      const refreshToken = res.data.refresh;
+
+      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("refreshToken", refreshToken);
+
       setMessage("Vous êtes connecté");
+      
       router.push("/");
     } catch (err) {
       if (axios.isAxiosError(err)) {

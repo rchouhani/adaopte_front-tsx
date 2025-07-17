@@ -38,3 +38,4 @@ export const register = async (
     return { error: (error as Error).message };
   }
 };
+
