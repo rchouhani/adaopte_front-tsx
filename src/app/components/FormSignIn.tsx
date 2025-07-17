@@ -19,10 +19,18 @@ export default function FormSignIn() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/api/register/", form);
-      console.log(res);
+      console.log('😁😁', form)
+      const res = await axios.post(
+        "http://localhost:8000/api/login/",
+        form, 
+        {
+          withCredentials: true, // important pour accepter les cookies du backend
+        }
+      );
 
-      setMessage("Compte créé avec succès !");
+      console.log(res.data);
+
+      setMessage("Vous êtes connecté");
       router.push("/");
     } catch (err) {
       if (axios.isAxiosError(err)) {
@@ -44,7 +52,8 @@ export default function FormSignIn() {
           <Input
             name="email"
             type="email"
-            placeholder="Email"
+            placeholder="E-Mail"
+            value={form.email}
             onChange={handleChange}
           />
 
@@ -52,6 +61,7 @@ export default function FormSignIn() {
             name="password"
             type="password"
             placeholder="Mot de passe"
+            value={form.password}
             onChange={handleChange}
           />
         </div>
