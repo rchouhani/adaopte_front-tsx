@@ -11,7 +11,7 @@ export default function QuestionsArea({
   cards,
 }: QuestionsAreaProps) {
   return (
-    <main className="flex flex-col items-center text-center p-[30px] bg-(--light-color) -mt-[70px] pt-[70px]">
+    <main className="flex flex-col items-center text-center p-[30px] bg-(--light-color)">
       <h2>{title}</h2>
       <h3>{subtitle}</h3>
 
