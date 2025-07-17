@@ -1,14 +1,15 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 import Banner from "@/app/components/Banner";
-import ContactButton from "@/app/components/UI/ContactButton";
-import FaqButton from "@/app/components/UI/FaqButton";
 import LastQuestion from "@/app/components/LastQuestion";
 import QuestionsArea from "@/app/components/QuestionsArea";
 
 import TestimonialsArea from "@/app/components/TestimonialsArea";
 
 import { Amatic_SC } from "next/font/google";
+import Button from "@/app/components/UI/Button";
 const amatic = Amatic_SC({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -43,9 +44,11 @@ const cardsContentVolunteer = [
 ];
 
 export default function BeVolunteer() {
+  const router = useRouter();
+
   return (
     <>
-      <main className={`${amatic.variable} relative aspect-[16/9]`}>
+      <main className={`${amatic.variable}`}>
         <Banner
           src="/assets/alin-luna-8LfPXM6abRk-unsplash.jpg"
           alt="image bannière"
@@ -65,8 +68,16 @@ export default function BeVolunteer() {
           title="Des questions ?"
           subtitle="Nous sommes là pour répondre à toutes vos interrogations concernant le bénévolat chez Adaopte. N'hésitez pas à nous contacter pour en savoir sur notre démarche."
         >
-          <FaqButton />
-          <ContactButton />
+          <Button
+            label="Foire aux questions"
+            onClick={() => router.push("/")}
+            classes=" bg-[#333] hover:bg-[#8e8d8d]"
+          />
+          <Button
+            label="Contactez-nous"
+            onClick={() => router.push("/")}
+            classes=" bg-[#e74c3c] hover:bg-[#ff6d38]"
+          />
         </LastQuestion>
       </main>
     </>

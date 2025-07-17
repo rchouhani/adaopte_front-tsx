@@ -16,7 +16,7 @@ const items = [
   {
     text: "Guide de l'adoption",
     lucide: <Dog />,
-    link: "https://www.defensedelanimal.fr/wp-content/uploads/2022/03/Guide-de-la-belle-adoption-WEB.pdf",
+    link: "/volunteersView/guide",
   },
   {
     text: "Devenir bénévole",

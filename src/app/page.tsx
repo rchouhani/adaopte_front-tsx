@@ -1,16 +1,16 @@
 "use client";
+import { useRouter } from "next/navigation";
 
-import AdoptButton from "./components/UI/AdoptButton";
 import AnimalsHomePage from "./components/AnimalsHomePage";
 import Banner from "./components/Banner";
-import BeVolunteerButton from "./components/UI/BeVolunteerButton";
-import DonationButton from "./components/UI/DonationButton";
 import LastQuestion from "./components/LastQuestion";
 import QuestionsArea from "./components/QuestionsArea";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
 import { Amatic_SC } from "next/font/google";
+import Button from "./components/UI/Button";
+
 const amatic = Amatic_SC({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -46,6 +46,8 @@ const items = [
 ];
 
 export default function Page() {
+  const router = useRouter();
+
   const cardsContent = [
     {
       title: "🔎",
@@ -97,9 +99,22 @@ export default function Page() {
         title="Prêt.e à changer une vie ?"
         subtitle="Adoptez, partagez,soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur, vous pouvez offrir une seconde chance à un animal abandonné."
       >
-        <AdoptButton />
-        <DonationButton />
-        <BeVolunteerButton />
+        <Button
+          label="Adopter un animal"
+          onClick={() => router.push("/volunteersView/guide")}
+          classes=" bg-[#333] hover:bg-[#8e8d8d]"
+        />
+        <Button
+          label="Faire un don 🫶🏽"
+          onClick={() => router.push("/volunteersView/donation")}
+          classes=" bg-[#e74c3c] hover:bg-[#ff6d38]"
+        />
+
+        <Button
+          label="Devenir bénévole"
+          onClick={() => router.push("/volunteersView/beVolunteer")}
+          classes=" bg-[#00a652] hover:bg-[#6fc59a]"
+        />
       </LastQuestion>
     </main>
   );
