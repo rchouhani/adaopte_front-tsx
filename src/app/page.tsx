@@ -29,7 +29,7 @@ const items = [
     link: "/volunteersView/searchPet",
   },
   {
-    text: "Je deviens bénévole",
+    text: "Bénévole/Adoptant",
     lucide: <PersonStanding />,
     link: "/volunteersView/beVolunteer",
   },

@@ -9,6 +9,20 @@ export default function TestimonialsArea() {
           Découvrez ce que nos bénévoles partagent de leur expérience avec
           Adaopte
         </h3>
+         <TestimonialsCard
+          image="/assets/d640719e-1ef6-4190-90b6-91169a14badc.jpg"
+          title="Edwige S."
+          subtitle="Bénévole depuis 2 ans"
+          paragraph="La cause animal a toujours été une action qui m'anime. Être bénévole chez Adaopte me permet de faire quelque chose de concret. Que ça soit le bien-être
+            des animaux ou le conseil auprès des nouveaux bénévoles et adoptants, j'adore être là et faire ce que je fais."
+        />
+        <TestimonialsCard
+          image="/assets/fely.jpeg"
+          title="Faty D."
+          subtitle="Bénévole depuis 3 ans"
+          paragraph="J'ai commencé à m'occuper d'Ely un petit chaton du refuge. Il m'a fait confiance puis m'a choisi. 
+            Aujourd'hui, il vit avec moi car on s'est tous les deux adoptés, ça m'a donné encore plus envie de continuer mes missions de bénévole au sein d'Adaopte."
+        />
         <TestimonialsCard
           image="/assets/omid-armin-yisZonvqh54-unsplash.jpg"
           title="Claire M."
