@@ -5,6 +5,7 @@ import UsersAdminCard from "@/app/components/UsersAdminCard";
 import { Pencil, Trash2 } from "lucide-react";
 import { Amatic_SC } from "next/font/google";
 import { useEffect, useState } from "react";
+import { backEndUrl } from "@/app/back-url";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],
@@ -38,7 +39,7 @@ export default function ManageAdoptants() {
 
   useEffect(() => {
     async function getUsers() {
-      const response = await fetch('https://adaopterofated.vercel.app/api/users/');
+      const response = await fetch(`${backEndUrl}api/users/`);
       const data = await response.json();
       setUsers(data);
     }

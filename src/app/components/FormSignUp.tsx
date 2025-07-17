@@ -6,6 +6,7 @@ import Button from "./UI/Button";
 import Input from "./UI/Input";
 import axios from "axios";
 import { useState } from "react";
+import { backEndUrl } from "../back-url";
 
 // type FormSignUpProps = {
 //   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -57,7 +58,7 @@ export default function FormSignUp() {
 
   //   e.preventDefault();
   //   try {
-  //     await axios.post("http://localhost:8000/api/users/create/", form);
+  //     await axios.post(`${backEndUrl}api/users/create/`, form);
   //     setMessage("Compte créé avec succès !");
   //     router.push("/logIn");
   //   } catch (err) {

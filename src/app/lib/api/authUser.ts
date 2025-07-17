@@ -1,4 +1,5 @@
 // lib/api/auth.ts
+import { backEndUrl } from "@/app/back-url";
 
 export type RegisterPayload = {
   email: string;
@@ -11,7 +12,7 @@ export const register = async (
 ): Promise<{ message?: string; error?: string }> => {
   console.log('payload', payload)
   try {
-    const res = await fetch("http://localhost:8000/api/register/", {
+    const res = await fetch(`${backEndUrl}api/register/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -2,6 +2,8 @@
 
 import { Amatic_SC } from "next/font/google";
 import { useEffect, useState } from "react";
+import { backEndUrl } from "@/app/back-url";
+
 const amatic = Amatic_SC({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -45,7 +47,7 @@ export default function ManagePets() {
 
   useEffect(() => {
     async function getPets() {
-      const response = await fetch('https://adaopterofated.vercel.app/api/pets/');
+      const response = await fetch(`${backEndUrl}api/pets/`);
       const data = await response.json();
       setPets(data);
     }
