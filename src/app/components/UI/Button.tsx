@@ -1,4 +1,3 @@
-import { LucideProps } from "lucide-react";
 import React from "react";
 
 export default function Button(props: {
@@ -11,7 +10,7 @@ export default function Button(props: {
 
   return (
     <button
-      className={"border-2 rounded-3xl px-1 h-15" + props.classes}
+      className={"mt-[30px] mb-[20px] border-2 rounded-3xl px-1 h-15  text-white rounded-[20px] h-[45px] w-[30%]" + props.classes}
       onClick={props.onClick}
       type={props.type}
     >
