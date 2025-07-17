@@ -1,9 +1,11 @@
+import { backEndUrl } from "@/app/back-url";
+
 type Props = {
   params: { id: string };
 };
 
 export default async function VolunteerPage({ params }: Props) {
-  const res = await fetch(`https://adaopterofated.vercel.app/api/users/${params.id}`, {
+  const res = await fetch(`${backEndUrl}api/users/${params.id}`, {
   });
 
   if (!res.ok) {

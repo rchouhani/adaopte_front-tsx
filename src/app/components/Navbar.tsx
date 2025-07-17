@@ -1,4 +1,4 @@
-import NavbarButton from "@/app/components/NavbarButton"
+import NavbarButton from "@/app/components/UI/NavbarButton"
 
 type Navbar = {
     lucide: React.ReactNode;

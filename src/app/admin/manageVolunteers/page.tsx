@@ -3,6 +3,8 @@
 import ManageVolunteersCard from "@/app/components/UI/ManageVolunteersCard";
 import { Amatic_SC } from "next/font/google";
 import { useEffect, useState } from "react";
+import { backEndUrl } from "@/app/back-url";
+
 const amatic = Amatic_SC({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -25,7 +27,7 @@ export default function ManageVolunteers() {
   useEffect(() => {
     async function getUsers() {
       const response = await fetch(
-        "http://localhost:8000/api/users/"
+        `${backEndUrl}api/users/`
       );
       const data = await response.json();
       setUsers(data);

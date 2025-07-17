@@ -10,16 +10,14 @@ const amatic = Amatic_SC({
 });
 
 export default function SeeDonations() {
-
-  interface Donations {
-    id: number,
-    amount_euros: number,
-    user_id: Users,
+  interface Availability {
+    frequency: string,
+    id: number
   }
 
   interface Users {
     id: string,
-    birthdate: Date,
+    birthdate: string,
     firstname: string,
     lastname: string,
     password: string,
@@ -30,16 +28,23 @@ export default function SeeDonations() {
     motivation: string,
     volunteer: string,
     adoptant: string,
-    availability_id: number
+    availability: Availability
+  }
+
+  interface Donations {
+    id: number,
+    amount_euros: number,
+    users: Users,
   }
 
   const [donations, setDonations] = useState<Donations[]>([])
-  const [users, setUsers] = useState<Users[]>([])
+  // const [users, setUsers] = useState<Users[]>([])
 
   useEffect(() => {
     async function getDonations() {
-      const response = await fetch('https://adaopterofated.vercel.app/api/donations/');
+      const response = await fetch('http://127.0.0.1:8000/api/donations/');
       const data = await response.json();
+      console.log(data)
       setDonations(data);
     }
     getDonations();
@@ -48,11 +53,11 @@ export default function SeeDonations() {
   return (
     <main className={`${amatic.variable}`}>
       <h2 className="font-amatic font-extrabold uppercase text-[2.3rem] text-center">Les dons effectués</h2>
-      {users && donations.map((donation) => {
+      {donations.map((donation) => {
         return (
           <DonationAdminCard
             key={donation.id}
-            donator={`${donation.user_id.firstname} ${donation.user_id.lastname}`}
+            id={donation.id}
             amountDonated={donation.amount_euros} />
         )
       })}

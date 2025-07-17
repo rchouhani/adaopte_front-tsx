@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
+import { backEndUrl } from "../back-url";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],
@@ -68,7 +69,7 @@ export default function SignUp() {
     
   //   e.preventDefault();
   //   try {
-  //     const res = await axios.post("http://localhost:8000/api/register/", form);
+      // const res = await axios.post(`${backEndUrl}api/register/`, form);
   //     setMessage("Compte créé avec succès !");
   //     router.push("/");
   //   } catch (err: any) {

@@ -5,6 +5,7 @@ import UsersAdminCard from "@/app/components/UsersAdminCard";
 import { Pencil, Trash2 } from "lucide-react";
 import { Amatic_SC } from "next/font/google";
 import { useEffect, useState } from "react";
+import { backEndUrl } from "@/app/back-url";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],
@@ -13,9 +14,14 @@ const amatic = Amatic_SC({
 });
 
 export default function ManageAdoptants() {
+  interface Availability {
+    frequency: string,
+    id: number
+  }
+
   interface Users {
     id: string,
-    birthdate: Date,
+    birthdate: string,
     firstname: string,
     lastname: string,
     password: string,
@@ -26,18 +32,18 @@ export default function ManageAdoptants() {
     motivation: string,
     volunteer: string,
     adoptant: string,
-    availability_id: number
+    availability_id: Availability
   }
 
   const [users, setUsers] = useState<Users[]>([])
 
   useEffect(() => {
-    async function getDonations() {
-      const response = await fetch('https://adaopterofated.vercel.app/api/users/');
+    async function getUsers() {
+      const response = await fetch(`${backEndUrl}api/users/`);
       const data = await response.json();
       setUsers(data);
     }
-    getDonations();
+    getUsers();
   }, [])
 
   return (
@@ -46,7 +52,10 @@ export default function ManageAdoptants() {
       <div className="flex flex-wrap">
         {users.map((user) => {
           return (
-            <div className="flex flex-col items-center">
+            <div
+              className="flex flex-col items-center"
+              key={user.id}
+            >
               <UsersAdminCard
                 firstname={user.firstname}
                 lastname={user.lastname}

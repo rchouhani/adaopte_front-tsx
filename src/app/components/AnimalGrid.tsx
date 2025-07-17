@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import AnimalCard from "./AnimalCard";
+import { backEndUrl } from "../back-url";
 
 export default function AnimalGrid() {
 
@@ -25,7 +26,7 @@ export default function AnimalGrid() {
 
     useEffect(() => {
         async function getPets() {
-            const response = await fetch('https://adaopterofated.vercel.app/api/pets_available/');
+            const response = await fetch(`${backEndUrl}api/pets_available/`);
             const data = await response.json();
             setPets(data);
             console.log(data);
