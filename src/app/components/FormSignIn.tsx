@@ -29,13 +29,7 @@ export default function FormSignIn() {
         }
       );
 
-      console.log(res.data);
-
-      const accessToken = res.data.access;
-      const refreshToken = res.data.refresh;
-
-      localStorage.setItem("accessToken", accessToken);
-      localStorage.setItem("refreshToken", refreshToken);
+      console.log('🌠',res.data);
 
       setMessage("Vous êtes connecté");
 

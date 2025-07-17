@@ -7,6 +7,7 @@ import LastQuestion from "./components/LastQuestion";
 import QuestionsArea from "./components/QuestionsArea";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
+import Link from "next/link";
 
 import { Amatic_SC } from "next/font/google";
 import Button from "./components/UI/Button";
@@ -79,6 +80,10 @@ export default function Page() {
     <main className={`${amatic.variable}`}>
       <Navbar items={items} />
       <div className="relative">
+                <Link href={'/admin/manageVolunteers'} className="bg-red-500 p-2 rounded-sm">
+        <button
+        >Vers Admin MV</button>
+        </Link>
         <Banner
           src="/assets/background.jpg"
           alt="image bannière"
