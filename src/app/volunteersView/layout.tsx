@@ -1,5 +1,5 @@
 import Navbar from "@/app/components/Navbar";
-import { House, Bone, Dog, Squirrel, LogOut, Book } from "lucide-react";
+import { House, Dog, LogOut, Book } from "lucide-react";
 import type { ReactNode } from "react";
 
 const items = [
@@ -17,11 +17,6 @@ const items = [
     text: "Guide de l'adoption",
     lucide: <Book />,
     link: "/volunteersView/guide",
-  },
-  {
-    text: "Devenir bénévole",
-    lucide: <Squirrel />,
-    link: "/volunteersView/beVolunteer",
   },
   {
     text: "Je me déconnecte",

@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Banner from "@/app/components/Banner";
 import LastQuestion from "@/app/components/LastQuestion";
 import QuestionsArea from "@/app/components/QuestionsArea";
-
 import TestimonialsArea from "@/app/components/TestimonialsArea";
 
 import { Amatic_SC } from "next/font/google";
@@ -52,13 +51,13 @@ export default function BeVolunteer() {
         <Banner
           src="/assets/alin-luna-8LfPXM6abRk-unsplash.jpg"
           alt="image bannière"
-          title="Devenir bénévole"
-          paragraph="Offrez votre temps, changez des vies. Chez Adaopte, chaque bénévole contribue à redonner espoir aux animaux en attente d'un foyer."
+          title="Devenir bénévole ou Adoptant"
+          paragraph="Offrez votre temps, changez des vies. Chez Adaopte, chaque bénévole ou adoptant contribue à redonner espoir aux animaux en attente d'un foyer."
         />
 
         <QuestionsArea
-          title="Pourquoi devenir bénévole"
-          subtitle="Être bénévole chez Adaopte, c'est bien plus qu'un coup de main : c'est un engagement du coeur qui change des vies humaines et animales."
+          title="Pourquoi devenir bénévole ou adoptant ?"
+          subtitle="Être bénévole ou adoptant chez Adaopte, c'est bien plus qu'un coup de main : c'est un engagement du coeur qui change des vies humaines et animales."
           cards={cardsContentVolunteer}
         />
 

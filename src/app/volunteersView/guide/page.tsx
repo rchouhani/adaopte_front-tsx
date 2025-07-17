@@ -75,7 +75,7 @@ export default function Guide() {
       </section>
    
       <section className="mt-[20px]">
-        <h4 className="text-center underline">
+        <h4 className="text-center underline p-[30px]">
           Je souhaite soumettre une demande d'adoption
         </h4>
       </section>
