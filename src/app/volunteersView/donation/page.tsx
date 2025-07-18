@@ -5,6 +5,7 @@ import Button from "@/app/components/UI/Button";
 import Input from "@/app/components/UI/Input";
 import { Amatic_SC } from "next/font/google";
 import { useState } from "react";
+import { FaLock, FaCheckCircle } from "react-icons/fa";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],
@@ -13,145 +14,167 @@ const amatic = Amatic_SC({
 });
 
 export default function Donation() {
-  const [amount, setAmount] = useState<number>();
+  const [selectedAmount, setSelectedAmount] = useState<number | "other">(20);
+  const [customAmount, setCustomAmount] = useState<number | "">("");
+  const [showPaymentBlock, setShowPaymentBlock] = useState(false);
   const [message, setMessage] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAmount(parseInt(e.target.value));
-  };
+  const presetAmounts = [10, 20, 50];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsModalOpen(true); // ouvrir la modale au submit
+    let amountToDonate =
+      selectedAmount === "other" ? customAmount : selectedAmount;
+    if (!amountToDonate || amountToDonate <= 0) {
+      alert("Veuillez entrer un montant valide.");
+      return;
+    }
+    setShowPaymentBlock(true);
+    setMessage("");
   };
 
   const handlePayment = () => {
+    const amountToDonate =
+      selectedAmount === "other" ? customAmount : selectedAmount;
     setMessage(
-      `Adaopte vous remercie pour votre don de ${amount}€ et votre solidarité`
+      `Merci pour votre don de ${amountToDonate}€. Votre soutien change des vies 🐾`
     );
-    setIsModalOpen(false);
+    setShowPaymentBlock(false);
+    setSelectedAmount(20);
+    setCustomAmount("");
   };
 
   return (
     <>
       <Banner
         src="/assets/banniere-don.jpg"
-        alt="image bannière"
-        title="Offrez un avenir aux animaux sans famille"
-        paragraph="Prise en charge des animaux abandonnés ou maltraités, lutte contre les souffrances animales, campagnes de sensibilisation, actions auprès des pouvoirs publics pour faire progresser la cause animale…"
+        alt="Bannière don SPA"
+        title="Soutenez la cause animale"
+        paragraph="Chaque don contribue à soigner et protéger les animaux abandonnés, et leur offrir une seconde chance."
       />
-      <main className={`${amatic.variable} relative aspect-[16/9] flex flex-col items-center text-center p-[30px] bg-(--bg-homepage) -mt-[20px] pt-[30px]`}>
+
+      <main
+        className={`${amatic.variable} flex flex-col items-center px-6 py-10 text-center bg-gray-50`}
+      >
+        <p className="max-w-lg">
+          Votre don permet de sauver des animaux tout en vous donnant droit à
+          une déduction fiscale de 66%*.
+        </p>
+        <h2 className="mb-5">Je fais un don</h2>
+
         <form
-          className="p-8 border border-white rounded-md flex flex-col gap-4 w-full max-w-md"
           onSubmit={handleSubmit}
+          className="bg-white w-full max-w-xl rounded-xl shadow-md p-6 flex flex-col gap-3 border"
         >
-          <h2>Je donne</h2>
-          <Input
-            type="number"
-            name="donationAmount"
-            placeholder="Votre montant ici"
-            onChange={handleChange}
-            value={amount}
-          />
+          <div className="flex justify-around flex-wrap gap-5">
+            {presetAmounts.map((amount) => (
+              <button
+                key={amount}
+                type="button"
+                className={`px-10 py-2 rounded-lg border transition ${
+                  selectedAmount === amount
+                    ? " bg-[#ff6d38] text-white border-#e74c3c"
+                    : " border-[#ff6d38] hover:border-#e74c3c"
+                }`}
+                onClick={() => setSelectedAmount(amount)}
+              >
+                {amount}€
+              </button>
+            ))}
+            <button
+              type="button"
+              className={`px-4 py-2 rounded-lg border transition ${
+                selectedAmount === "other"
+                  ? " bg-[#ff6d38] text-white border-#e74c3c"
+                  : " border-[#ff6d38] hover:border-#e74c3c"
+              }`}
+              onClick={() => setSelectedAmount("other")}
+            >
+              Autre
+            </button>
+          </div>
+
+          {selectedAmount === "other" && (
+            <Input
+              type="number"
+              name="customAmount"
+              placeholder="Montant libre"
+              // value={customAmount || ""}
+              onChange={(e) => setCustomAmount(Number(e.target.value))}
+              min="1"
+              classes=""
+            />
+          )}
 
           <Button
             type="submit"
-            label="Valider"
-            classes="mt-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-full hover:bg-[#8e8d8d]"
+            label="Je donne"
+            classes=" rounded-full py-3 mt-4 w-full bg-green-700 text-white rounded-lg hover:bg-green-900"
           />
+
+          <div className="flex items-center justify-center text-gray-500 text-sm mt-2 gap-2">
+            <FaLock className="text-green-700" /> Paiement sécurisé
+          </div>
         </form>
 
-        <p className="mt-4">{message}</p>
-
-        {isModalOpen && (
-          <div className="fixed flex justify-center items-center border-2 rounded-lg">
-            <div className="bg-gray-200 fixed flex flex-col justify-center items-center rounded-xl p-8 w-[50%] h-[50%] text-center space-y-4 border">
-              <h2>Informations bancaires</h2>
-              <Input type="text" name="text" placeholder="Nom " />
-              <Input
-                type="text"
-                name="cardNumber"
-                placeholder="Numéro de carte"
-              />
+        {showPaymentBlock && (
+          <div className="bg-white w-full max-w-xl rounded-xl shadow-md p-6 flex flex-col gap-4 mt-8 border">
+            <h2 className="text-xl font-bold mb-2">
+              Vos coordonnées bancaires
+            </h2>
+            <Input type="text" name="name" placeholder="Nom complet" />
+            <Input
+              type="text"
+              name="cardNumber"
+              placeholder="Numéro de carte"
+            />
+            <div className="flex justify-around">
+              <Input type="text" name="expiry" placeholder="MM/AA" />
               <Input type="text" name="cvc" placeholder="CVC" />
-              <div className="flex flex-row">
-                <Button
-                  type="submit"
-                  label="Confirmer le don"
-                  classes="mt-[20px] bg-green-700 text-white rounded-[20px] h-[45px] w-[200] hover:bg-green-900"
-                  onClick={handlePayment}
-                />
-                <Button
-                  type="button"
-                  label="Annuler"
-                  onClick={() => setIsModalOpen(false)}
-                  classes="mt-[20px] bg-red-600 text-white rounded-[20px] h-[45px] w-[200] hover:bg-red-800"
-                />
-              </div>
+            </div>
+
+            <div className="flex  mt-4">
+              <Button
+                type="button"
+                label="Confirmer le don"
+                classes=" bg-green-700 hover:bg-green-800 w-full text-white rounded-full py-3 px-6"
+                onClick={handlePayment}
+              />
+              <Button
+                type="button"
+                label="Annuler"
+                classes=" bg-red-600 hover:bg-red-700 w-full text-white rounded-full py-3 px-6"
+                onClick={() => setShowPaymentBlock(false)}
+              />
             </div>
           </div>
         )}
+
+        {message && (
+          <div className="flex flex-col items-center mt-6 text-green-700 text-lg">
+            <FaCheckCircle className="text-2xl mb-2" />
+            {message}
+          </div>
+        )}
       </main>
+      <section className="bg-gray-400 text-white w-full p-3">
+        <h4 className="pt-5 text-center font-extrabold text-xl mb-5">Donner en toute sécurité</h4>
+
+        <p className="font-semibold">Page de paiement 100% sécurisé par Fatos Security Group.</p>
+        <br/>
+        <p className="font-semibold">
+          {" "}
+          Plus de 13 700 animaux recueillis dans nos refuges en 2024 grâce à vos
+          dons. Une question sur votre don ? Toutes les réponses sont dans notre
+          FAQ
+        </p>
+        <br/>
+        <p className="font-semibold">
+          ADAOPTE est agréée par le Comité de la Charte - Don en Confiance et se
+          soumet à son contrôle pour le respect des principes de la charte de
+          déontologie.
+        </p>
+      </section>
     </>
   );
 }
-
-// "use client";
-
-// import Banner from "@/app/components/Banner";
-// import Button from "@/app/components/UI/Button";
-// import Input from "@/app/components/UI/Input";
-
-// import { Amatic_SC } from "next/font/google";
-// import { useState } from "react";
-// const amatic = Amatic_SC({
-//   weight: ["400", "700"],
-//   subsets: ["latin"],
-//   variable: "--font-amatic",
-// });
-
-// export default function Donation() {
-//   const [amount, setAmount] = useState(0);
-//   const [message, setMessage] = useState("");
-
-//   const handleChange = (e: any) => {
-//     setAmount(e.target.value);
-//     console.log(e.target.value);
-//   };
-
-//   const handleSubmit = (e: any) => {
-//     e.preventDefault();
-//     setMessage(`Adaopte vous remercie pour votre don et votre solidarité`);
-//   };
-
-//   return (
-//     <>
-//       <Banner
-//         src="/assets/banniere-don.jpg"
-//         alt="image bannière"
-//         title="Offrez un avenir aux animaux sans famille"
-//         paragraph="Prise en charge des animaux abandonnés ou maltraités, lutte contre les souffrances animales, campagnes de sensibilisation, actions auprès des pouvoirs publics pour faire progresser la cause animale…"
-//       />
-//       <main className="flex flex-col items-center text-center p-[30px] bg-(--bg-homepage) -mt-[20px] pt-[30px]">
-
-//         <form className="p-8 border-1 p-5 rounded-md" onSubmit={handleSubmit}>
-//         <h2>Je donne</h2>
-//           <Input
-//             type="number"
-//             name="donationAmont"
-//             placeholder="Votre montant ici"
-//             onChange={handleSubmit}
-//           />
-//         </form>
-
-//         <Button
-//           type="submit"
-//           label="Valider"
-//           classes=" mt-[20px] bg-[#333] text-white rounded-[20px] h-[45px] w-[30%] hover:bg-[#8e8d8d]"
-//         />
-//         <p>{message}</p>
-//       </main>
-//     </>
-//   );
-// }
