@@ -20,19 +20,21 @@ export default function FormSignIn() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      console.log('😁😁', form)
-      const res = await axios.post(
-        `${backEndUrl}api/login/`,
-        form, 
-        {
-          withCredentials: true, // important pour accepter les cookies du backend
-        }
-      );
+      console.log("😁😁", form);
 
-      console.log('🌠',res.data);
+      const api = axios.create({
+        baseURL: process.env.NEXT_PUBLIC_BACK_END_URL || backEndUrl, // https://adaopterofated.vercel.app
+        withCredentials: true, // ⚡ indispensable pour que le cookie/token circule
+      });
 
+      const res = await api.post("/api/login/", form, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log("✅ Réponse backend:", res.data);
       setMessage("Vous êtes connecté");
-
       router.push("/");
     } catch (err) {
       if (axios.isAxiosError(err)) {
