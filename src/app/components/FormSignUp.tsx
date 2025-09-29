@@ -4,9 +4,7 @@ import { register } from "../lib/api/authUser";
 import { useRouter } from "next/navigation";
 import Button from "./UI/Button";
 import Input from "./UI/Input";
-import axios from "axios";
 import { useState } from "react";
-import { backEndUrl } from "../back-url";
 
 // type FormSignUpProps = {
 //   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

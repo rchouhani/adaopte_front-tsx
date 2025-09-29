@@ -11,7 +11,7 @@ const amatic = Amatic_SC({
 
 export default function Guide() {
   return (
-    <main className={`${amatic.variable}`}>
+    <main className={amatic.variable}>
       <Banner
         src="/assets/guide-img.webp"
         alt="image bannière"
@@ -19,7 +19,7 @@ export default function Guide() {
         paragraph="En adoptant un animal de compagnon dans un des refuges indépendants, vous lui offrez une nouvelle vie et une chance d'être enfin heureux."
       />
       <h2 className="flex justify-center">
-        Quelques étapes à savoir avant d'adopter{" "}
+        Quelques étapes à savoir avant d&apos;adopter{" "}
       </h2>
       <section>
         <GuideCard
@@ -58,17 +58,17 @@ export default function Guide() {
         est indispensable pour retrouver bien-être est apaisement."
         />
         <p className="p-5">
-          Pour en apprendre davantage, n'hésitez pas à vous rendre sur ce lien :{" "}
+          Pour en apprendre davantage, n&apos;hésitez pas à vous rendre sur ce lien :{" "}
           <a
             href="https://www.defensedelanimal.fr/wp-content/uploads/2022/03/Guide-de-la-belle-adoption-WEB.pdf"
             target="blank"
             className="underline font-extrabold italic"
           >
             {" "}
-            Le Guide complet de l'adoption.
+            Le Guide complet de l&apos;adoption.
           </a>{" "}
           <br />
-          Toutes les étapes y sont détaillées et plus encore. Sinon, n'hésitez
+          Toutes les étapes y sont détaillées et plus encore. Sinon, n&apos;hésitez
           pas à nous contacter directement, nous prendrons le temps de bien tout
           vous expliquer.
         </p>
@@ -76,7 +76,7 @@ export default function Guide() {
    
       <section className="mt-[20px]">
         <h4 className="text-center underline p-[30px]">
-          Je souhaite soumettre une demande d'adoption
+          Je souhaite soumettre une demande d&apos;adoption
         </h4>
       </section>
     </main>

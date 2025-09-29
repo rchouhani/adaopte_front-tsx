@@ -3,12 +3,12 @@
 // import { register } from "../api/register/route"; // adapte le chemin selon ton projet
 import FormSignUp from "../components/FormSignUp";
 import { Amatic_SC } from "next/font/google";
-import axios from "axios";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+// import axios from "axios";
+// import { useRouter } from "next/navigation";
+// import { useState } from "react";
 import { Home, LogIn, Handshake, PersonStanding, Dog } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
-import { backEndUrl } from "../back-url";
+// import { backEndUrl } from "../back-url";
 
 const amatic = Amatic_SC({
   weight: ["400", "700"],

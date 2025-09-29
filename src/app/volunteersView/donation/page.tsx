@@ -23,7 +23,7 @@ export default function Donation() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    let amountToDonate =
+    const amountToDonate =
       selectedAmount === "other" ? customAmount : selectedAmount;
     if (!amountToDonate || amountToDonate <= 0) {
       alert("Veuillez entrer un montant valide.");
